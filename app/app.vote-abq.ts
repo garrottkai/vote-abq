@@ -2,7 +2,7 @@ import {Component} from "angular2/core";
 import {VotingList} from "./voting-list";
 import {HTTP_PROVIDERS} from "angular2/http";
 import {VotingService} from "./voting.service";
-import {Routes, Router, ROUTER_DIRECTIVES} from "@angular/router";
+import {RouteConfig, ROUTER_DIRECTIVES} from "angular2/router";
 
 
 @Component({
@@ -11,5 +11,11 @@ import {Routes, Router, ROUTER_DIRECTIVES} from "@angular/router";
 	directives: [VotingList],
 	providers: [HTTP_PROVIDERS, VotingService]
 })
+
+@RouteConfig([
+	{path: "/", name: "VoteAbqSplash", component: VoteAbq},
+	{path: "/voting/:id", name: "VoteAbqDetail", component: VotingList}
+])
+
 
 export class VoteAbq {}
