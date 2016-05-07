@@ -13,7 +13,7 @@ import {RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS} from "angular2/router"
 })
 
 @RouteConfig([
-	{path: "/", name: "VoteAbqSplash", component: VoteAbq},
+	{path: "/", name: "VoteAbqSplash", component: VotingList, useAsDefault: true},
 	{path: "/voting/:id", name: "VoteAbqDetail", component: VotingList}
 ])
 
